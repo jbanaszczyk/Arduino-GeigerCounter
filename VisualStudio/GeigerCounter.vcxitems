@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{8b128ddd-f9ce-4c8b-bdda-0e80308276e7}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)..\src\</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)..\src\readme.txt" />
+	<Text Include="$(MSBuildThisFileDirectory)..\src\library.properties" />
+  	<!-- <Text Include="$(MSBuildThisFileDirectory)..\src\GeigerCounter.h" /> -->
+  </ItemGroup>
+ <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\GeigerCounter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\GeigerCounter.cpp" />
+  </ItemGroup>
+  </Project>
