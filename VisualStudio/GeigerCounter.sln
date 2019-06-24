@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeigerCounter", "GeigerCounter.vcxitems", "{8B128DDD-F9CE-4C8B-BDDA-0E80308276E7}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p01basic", "..\examples\p01basic\p01basic.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeigerCounter", "GeigerCounter.vcxitems", "{8B128DDD-F9CE-4C8B-BDDA-0E80308276E7}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

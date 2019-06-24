@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="Globals">
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
@@ -14,14 +14,18 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="$(MSBuildThisFileDirectory)..\src\readme.txt" />
-	<Text Include="$(MSBuildThisFileDirectory)..\src\library.properties" />
-  	<!-- <Text Include="$(MSBuildThisFileDirectory)..\src\GeigerCounter.h" /> -->
+    <Text Include="$(MSBuildThisFileDirectory)..\src\library.properties" />
+    <!-- <Text Include="$(MSBuildThisFileDirectory)..\src\GeigerCounter.h" /> -->
   </ItemGroup>
- <ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\CppExternalInterrupt.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\src\GeigerCounter.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\CppExternalInterrupt.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\src\GeigerCounter.cpp" />
   </ItemGroup>
-  </Project>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)..\doc\README.md" />
+  </ItemGroup>
+</Project>

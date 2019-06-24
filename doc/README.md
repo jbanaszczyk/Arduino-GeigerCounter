@@ -1,4 +1,19 @@
+# High voltage warning: be careful
+
+![Vigh Voltage](resources/high_voltage.png) 
+
+* Metal spacers are:
+  * too short
+  * top right spacer is located too close (less than 1 mm) to the tube cathode (350[V])
+  * **Solution**: please use longer, **nylon** ones instead of metal spacers
+* Jumper J4:
+  * connects J2 point to the tube cathode
+  * J2 point is located near to near power on/off switch
+  * J2 is used during calibration procedure only
+  * **Solution**: keep open J4 jumper
+
 # Documentation, manuals, videos
+
 
 ## From https://github.com/SensorsIot/Geiger-Counter-RadiationD-v1.1-CAJOE-
 
@@ -9,14 +24,7 @@
 
 [![Very valuable video from Andreas Spiess](https://img.youtube.com/vi/K28Az3-gV7E/0.jpg)](https://www.youtube.com/watch?v=K28Az3-gV7E)
 
-### Extras About M4011 tube (we are using J305&beta;&gamma; instead)
-
-* [M4011 Specification](M4011%20Geiger%20Tube%20Specification.pdf) - probably from the board manufacturer
-* [Counter per minutes to &#181;Sievert per hour](How%20to%20convert%20the%20conuters%20from%20Geiger%20Counter%20Kit.pdf) - probably from the board manufacturer
-
-## Other resources
-
-### J305&beta;&gamma; Specifications
+## J305&beta;&gamma; Specifications
 
 | Parameter | Value |
 |---|---|
@@ -30,7 +38,7 @@
 | Plateau length | at least 100 [V] |
 | Maximum Plateau Slope | 15 [%/100V] |
 | Recommended Operating Voltage | 400 [V] |
-| Working Voltage | 350-450 [V] | 
+| Working Voltage | 350-450 [V] |
 | Working Current | 15-20 [&#181;A] |
 | Gamma Sensitivity Co60 | 65  (cps/&#181;R/s)|
 | Minimum Dead Time (at U=500V) | 75 [&#181;s] |
@@ -39,7 +47,15 @@
 | Life | at least 2*10<sup>10</sup> [pulses] |
 | Detecting | &gamma;&beta; : gamma and hard beta |
 | Sensivity to Gamma Radiation | 0.1 MeV |
-| &gamma; range | 20 &asymp; 120 [mR/h] | 
-| &beta; range | 100 &asymp; 1800  | 
+| &gamma; range | 20 &asymp; 120 [mR/h] |
+| &beta; range | 100 &asymp; 1800  |
+
+## Extras About M4011 tube (we are using J305&beta;&gamma; instead)
+
+A bit useful:
+* [M4011 Specification](M4011%20Geiger%20Tube%20Specification.pdf) - probably from the board manufacturer
+* [Counter per minutes to &#181;Sievert per hour](How%20to%20convert%20the%20conuters%20from%20Geiger%20Counter%20Kit.pdf) - probably from the board manufacturer
+
+## GM tubes evaluated
 
 Other GM tubes evaluated: https://sites.google.com/site/diygeigercounter/technical/gm-tubes-supported\
