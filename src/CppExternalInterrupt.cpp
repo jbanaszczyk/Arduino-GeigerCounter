@@ -6,12 +6,12 @@
 
 #ifndef _countof
 template <typename _CountofType, size_t _SizeOfArray>
-char (*__countof_helper(_CountofType (&_Array)[_SizeOfArray]))[_SizeOfArray];
+char (*                                 __countof_helper(_CountofType (&_Array)[_SizeOfArray]))[_SizeOfArray];
 #define _countof(_Array) (sizeof(*__countof_helper(_Array)) + 0)
 #endif
 
 template <int N>
-void CppExternalInterrupt::isrHandlerExt() {
+void          CppExternalInterrupt::isrHandlerExt() {
     if (instances[N] != nullptr)
         instances[N]->isrHandler();
 }
@@ -34,10 +34,13 @@ void CppExternalInterrupt::deRegisterIsr(const int interruptNumber) {
     }
 }
 
+bool CppExternalInterrupt::isActive() const {
+    return interruptNumber != NOT_AN_INTERRUPT;
+}
+
 bool CppExternalInterrupt::begin(const int8_t pinNumber, const int mode) {
-    const auto result = digitalPinToInterrupt(pinNumber);
-    interruptNumber   = registerIsr(this, pinNumber, mode);
-    return result != NOT_AN_INTERRUPT;
+    interruptNumber = registerIsr(this, pinNumber, mode);
+    return isActive();
 }
 
 void CppExternalInterrupt::end() {
@@ -45,6 +48,6 @@ void CppExternalInterrupt::end() {
     interruptNumber = NOT_AN_INTERRUPT;
 }
 
-CppExternalInterrupt *CppExternalInterrupt::instances[]   = {nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr};
+CppExternalInterrupt *CppExternalInterrupt::instances[] = {nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr};
 
 void (*CppExternalInterrupt::handlers[])() = {isrHandlerExt<0>, isrHandlerExt<1>, isrHandlerExt<2>, isrHandlerExt<3>, isrHandlerExt<4>, isrHandlerExt<5>, isrHandlerExt<6>, isrHandlerExt<7>};

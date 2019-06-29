@@ -12,6 +12,8 @@ class CppExternalInterrupt {
 
     static CppExternalInterrupt *instances[MAX_EXTERNAL_NUM_INTERRUPTS];
 
+    bool isActive() const;
+
     static int registerIsr(CppExternalInterrupt *intThisPtr, int8_t pinNumber, int mode);
 
     static void deRegisterIsr(int interruptNumber);

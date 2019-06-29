@@ -20,7 +20,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\src\CppExternalInterrupt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\GeigerCounter.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\GeigerDetector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -28,7 +28,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\src\CppExternalInterrupt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\GeigerCounter.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\GeigerDetector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

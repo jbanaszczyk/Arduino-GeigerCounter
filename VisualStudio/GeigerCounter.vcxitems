@@ -19,11 +19,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)..\src\CppExternalInterrupt.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\GeigerCounter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\src\GeigerDetector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\src\CppExternalInterrupt.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\GeigerCounter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\src\GeigerDetector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)..\doc\README.md" />

@@ -121,4 +121,9 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties config.Debug.customdebug_uno_debugger_type="universal" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
